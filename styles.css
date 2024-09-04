@@ -1,3 +1,14 @@
+@media screen and (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+  
+    /* Add a button or icon to trigger the menu */
+nav .menu-toggle {
+      display: block;
+    }
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -27,7 +38,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav ul li a {
