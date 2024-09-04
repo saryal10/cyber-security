@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Club - Toledo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/fav.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Cyber Security Club Logo" href="index.html">
+    <h1>Club for Cyber Security - University of Toledo</h1>
+    <nav>
+      <ul> 
+        <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="ourteam.html">Our Team</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="joinus.html">Get Involved</a></li>
+            <li><a href="resources.html">Resources</a></li>   
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+        <img src="assets/aboutus.jpeg" alt="Cybersecurity Banner">
+        <h2>Join the Club to Learn from Future Cyber Security Experts</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="https://invonet.utoledo.edu/organization/utoledoccs" class="button">Join Us</a>
+      </section>
+
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <p>The Cyber Security Club at the University of Toledo is a student-run organization dedicated to fostering a community of passionate and skilled cybersecurity enthusiasts. We provide a platform for students to explore their interests, develop practical skills, and connect with industry professionals.</p>
+
+        <p>Our mission is to promote cybersecurity awareness, education, and research within the university community. We strive to equip our members with the knowledge and tools necessary to address the ever-evolving challenges of the digital age.</p>
+
+        <p>Our club offers a variety of activities and events, including:</p>
+        <ul>
+          <li>Regular meetings and workshops
+            <div class="expandable-content">
+              <p>We hold weekly meetings for discussions and presentations on various cybersecurity topics. Our workshops provide hands-on training and practical experience.</p>
+            </div>
+          </li>
+          <li>Guest lectures from industry experts
+            <div class="expandable-content">
+              <p>We invite professionals from the cybersecurity industry to share their insights and experiences. These lectures provide valuable networking opportunities and exposure to real-world applications.</p>
+            </div>
+          </li>
+          <li>Capture the Flag (CTF) competitions
+            <div class="expandable-content">
+              <p>Our CTF competitions offer challenging puzzles and challenges to test your hacking skills. Teams compete against each other to solve problems and capture flags. Winners receive prizes and recognition.</p>
+            </div>
+          </li>
+          <li>Hackathons
+            <div class="expandable-content">
+              <p>Hackathons are intensive programming events where participants collaborate to develop innovative cybersecurity solutions. They provide a great opportunity to showcase your skills and learn from others.</p>
+            </div>
+          </li>
+          <li>Networking opportunities
+            <div class="expandable-content">
+              <p>We organize networking events to connect our members with industry professionals and other cybersecurity enthusiasts. This allows you to build relationships, explore career opportunities, and stay updated on the latest trends.</p>
+            </div>
+          </li>
+        </ul>
+
+        <p>Join us and become a part of a vibrant community of cybersecurity professionals!</p>
+      </div>
+    </section>
+    <section class="about" id="about">
+    </section>
+
+    <section class="about" id="about">
+    </section>
+
+  
+
+    <a href="index.html" class="back-button">Back to Home</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Club for Cyber Security - University of Toledo</p>
+  </footer>
+
+  <script>
+    const listItems = document.querySelectorAll('.about ul li');
+
+    listItems.forEach(listItem => {
+      listItem.addEventListener('click', () => {
+        listItem.classList.toggle('expanded');
+      });
+    });
+  </script>
+</body>
+</html>
