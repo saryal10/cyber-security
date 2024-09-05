@@ -24,24 +24,115 @@
   </header>
 
   <main>
-    <div class="coming-soon-container">
-      <img src="assets/comingsoon.jpeg" alt="Coming Soon">
-      <h1>Coming Soon</h1>
-      <p>Stay tuned for exciting updates!</p>
-    </div>
-
-    <div class="coming-soon-container">
-        
+    <section class="hero">
+      <img src="assets/image.jpeg" alt="Cybersecurity Banner">
+      <h2>Join the Club to Learn from Current and Future Cyber Security Experts</h2>
+      <p>Join us on InvoNet | Follow us on Social Media | Attend our meetings | Have a conversation with one of the team members.</p>
+      <a href="https://invonet.utoledo.edu/organization/utoledoccs" class="button">Join Us</a>
+    </section>
+  
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <div class="event-box" onclick="toggleEvent(this)">
+        <div class="event-header">
+          <h3>Cyber Force Competition - Interested Head Cound</h3>
+          <p class="event-summary">Date: September 6 - 9, 2024 | Venue: Club Website</p>
+        </div>
+        <div class="event-content">
+          <div class="event-details">
+            <img src="assets/event1.jpg" alt="Event 1">
+            <div class="event-info">
+              <p><strong>Date:</strong> September 6 - 9, 2024</p>
+              <p><strong>Venue:</strong> Club Website</p>
+              <p><strong>Description:</strong> Detailed description of Cyber Force Competition - Interested Head Count...</p>
+            </div>
+          </div>
+          <div class="event-more-info">
+            <iframe 
+            id="google-form" 
+            src="https://docs.google.com/forms/d/e/1FAIpQLScT5nq4nFU8ZtvBbDc1vXlgtI3b7TFkASy4qpNJR8On5Fk7OQ/viewform?embedded=true" 
+            width="100%" 
+            height="500" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+            Loading…
+          </iframe>
+          </div>
+        </div>
       </div>
-
-      <div class="coming-soon-container">
-        
+      <div class="event-box" onclick="toggleEvent(this)">
+        <div class="event-header">
+          <h3>Capture The Flag Season 1</h3>
+          <p class="event-summary">Date: TBD, 2024 | Venue: TBD</p>
+        </div>
+        <div class="event-content">
+          <div class="event-details">
+            <img src="assets/event2.jpg" alt="Event 2">
+            <div class="event-info">
+              <p><strong>Date:</strong> TBD</p>
+              <p><strong>Venue:</strong> TBD</p>
+              <p><strong>Description:</strong> Detailed description of CTF event...</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- <div class="event-box" onclick="toggleEvent(this)">
+        <div class="event-header">
+          <h3>Event 3</h3>
+          <p class="event-summary">Date: November 15, 2024 | Venue: Tech Lab</p>
+        </div>
+        <div class="event-content">
+          <div class="event-details">
+            <img src="assets/event3.jpg" alt="Event 3">
+            <div class="event-info">
+              <p><strong>Date:</strong> November 15, 2024</p>
+              <p><strong>Venue:</strong> Tech Lab</p>
+              <p><strong>Description:</strong> Detailed description of Event 3...</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+  
     <a href="index.html" class="back-button">Back to Home</a>
   </main>
 
   <footer>
     <p>&copy; 2024 Club for Cyber Security - University of Toledo</p>
   </footer>
+
+  <script>
+    function toggleEvent(element) {
+      const isExpanded = element.classList.contains('expanded');
+      const allEventBoxes = document.querySelectorAll('.event-box');
+      
+      // Close all event boxes
+      allEventBoxes.forEach(box => box.classList.remove('expanded'));
+      
+      // Toggle the clicked box
+      if (!isExpanded) {
+        element.classList.add('expanded');
+      }
+    }
+  
+    // Add event listener for form submission
+    document.addEventListener('DOMContentLoaded', function() {
+      const forms = document.querySelectorAll('.event-more-info iframe');
+      forms.forEach(form => {
+        form.onload = function() {
+          const formWindow = form.contentWindow;
+          formWindow.addEventListener('message', function(event) {
+            if (event.data === 'formSubmitted') {
+              const eventBox = form.closest('.event-box');
+              if (eventBox) {
+                eventBox.classList.remove('expanded');
+              }
+            }
+          });
+        };
+      });
+    });
+  </script>
 </body>
 </html>
